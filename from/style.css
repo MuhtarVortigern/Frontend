@@ -1,0 +1,55 @@
+body {
+  background-color: rgb(249 250 251);
+}
+/* Mengatur ukuran dan bentuk lingkaran */
+.checkbox-wrapper {
+  display: inline-block;
+}
+
+.checkbox-input {
+  display: none; /* Menyembunyikan checkbox asli */
+}
+
+.checkbox-label {
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: #ccc;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkbox-label:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Ketika checkbox dicentang */
+.checkbox-input:checked + .checkbox-label {
+  background-color: #4caf50; /* Hijau saat dicentang */
+}
+
+.checkbox-input:checked + .checkbox-label:before {
+  transform: translateX(25px); /* Geser ke kanan saat dicentang */
+}
+.ck-editor__editable_inline {
+  min-height: 350px;
+}
+/* Responsif: toolbar menjadi menu titik tiga di layar kecil */
+@media (max-width: 768px) {
+  .ck-toolbar {
+    display: none;
+  }
+  .ck-toolbar__overflow {
+    display: flex;
+  }
+}
