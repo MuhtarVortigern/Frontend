@@ -44,6 +44,61 @@ body {
 .ck-editor__editable_inline {
   min-height: 350px;
 }
+
+.selected-tags {
+  font-weight: 500;
+}
+
+input::placeholder {
+  font-weight: 500;
+  color: rgb(71 85 105);
+}
+
+.category-input {
+  width: 100%;
+  position: relative;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 40px;
+}
+
+.selected-tags .tag {
+  display: flex;
+  align-items: center;
+  background-color: #e2e8f0;
+  color: black;
+  padding: 2px 2px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.selected-tags .tag .remove-btn {
+  margin-left: 8px;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.dropdown-item {
+  font-size: 14px;
+}
+
+.arrow-icon {
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
 /* Responsif: toolbar menjadi menu titik tiga di layar kecil */
 @media (max-width: 768px) {
   .ck-toolbar {
